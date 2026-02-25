@@ -1,0 +1,193 @@
+.login-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    118.447deg,
+    rgb(74, 85, 101) 0%,
+    rgb(0, 153, 102) 50%,
+    rgb(0, 150, 137) 100%
+  );
+  padding: 0 16px;
+  padding-top: var(--safe-area-inset-top);
+  padding-bottom: var(--safe-area-inset-bottom);
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 422px;
+    gap: 32px;
+  }
+
+  .login-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 24px;
+    min-height: 200px;
+    box-sizing: border-box;
+    margin-top: -160px;
+
+    .welcome-title {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      letter-spacing: -0.4492px;
+      color: #1e2939;
+      text-align: center;
+      margin: 0;
+      flex-shrink: 0;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 16px;
+      margin-top: 8px;
+      flex-shrink: 0;
+
+      // Override Ant Design Mobile input wrapper
+      .adm-input {
+        border: 0.653px solid #c5cad3;
+        border-radius: 999px;
+        padding: 0;
+        height: 46px;
+        background: transparent;
+        box-sizing: border-box;
+
+        &::before,
+        &::after {
+          display: none !important;
+        }
+      }
+
+      .phone-input {
+        // Override Ant Design Mobile input styles
+        &.adm-input {
+          border: 0.653px solid #c5cad3;
+          border-radius: 999px;
+          padding: 0 16px;
+          height: 46px;
+          width: 100%;
+          box-sizing: border-box;
+
+          .adm-input-element {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.3125px;
+            color: rgba(10, 10, 10, 1);
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+
+            &::placeholder {
+              color: rgba(10, 10, 10, 0.5);
+            }
+          }
+        }
+      }
+
+      .continue-button {
+        height: 46px;
+        border-radius: 999px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.3125px;
+        padding: 0;
+
+        // Override Ant Design Mobile button styles
+        &.adm-button {
+          background: linear-gradient(to right, #009966, #009689);
+          border: none;
+          height: 46px;
+          padding: 11px 0;
+          border-radius: 999px;
+
+          .adm-button-text {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.3125px;
+          }
+
+          &:active {
+            background: linear-gradient(to right, #008855, #008578);
+          }
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      .sms-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: -4px;
+      }
+
+      .text-button {
+        background: transparent;
+        border: none;
+        color: #009966;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.1504px;
+        padding: 0;
+        cursor: pointer;
+
+        &:disabled {
+          color: rgba(0, 150, 137, 0.5);
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+    padding-top: 32px;
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .footer-text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: -0.1504px;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
